@@ -6,11 +6,13 @@ def _coinChange(idxCoin, coins, amount):
 	if idxCoin < len(coins) and amount > 0:
 		maxVal = int(amount / coins[idxCoin])
 		minCost = amount + 1
+		print("-------------")
 		for x in range(0, maxVal + 1):
-			kk = x * coins[idxCoin]
+			kk = amount - x * coins[idxCoin]
 			if amount >= x * coins[idxCoin]:
 				res = _coinChange(idxCoin + 1, coins, amount - x * coins[idxCoin])
 				if res != -1:
+					print('select > ' + str(coins[idxCoin]))
 					minCost = min(minCost, res + x)
 		return -1 if (minCost == amount + 1) else minCost
 	return -1
