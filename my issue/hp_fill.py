@@ -29,17 +29,24 @@
 	# 	return -1 if (minCost == amount + 1) else minCost
 	# return -1
 
-def slat(idx, items, hp):
+def slat(idx, items, nums, hp, select):
 	if hp <= 0:
 		return 0
-	if idx < len(items.keys) and hp > 0:
-		hv = items.keys[idx]
-		if items[hv] == 0:
-			return -1
+	if idx < len(items) and hp > 0:
+		hv = items[idx]
+		#if items[hv] <= 0:
+		#	return -1
 		maxVal = int(hp / hv)
+		minCost = hp * 2
 		for x in range(0, maxVal + 1):
-			
-
+			if hp >= x * hv:
+				res = slat(idx + 1, items, nums, hp - x * hv, select)
+				if res != -1:
+					minCost = min(minCost, res + x)
+		return -1 if (minCost > hp) else minCost
+	return -1
 
 if __name__ == "__main__":
-	slat(0, {500:3, 100:7, 1000:1}, 750)
+	select = []
+	res = slat(0, [500, 100, 1000], [3, 7, 1], 700, select)
+	print("result > " + str(res))
