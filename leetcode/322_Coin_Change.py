@@ -25,15 +25,17 @@ def coinChange2(coins, amount):
 	dp = [max for i in range(amount + 1)]
 	dp[0] = 0
 	for i in range(1, amount + 1):
+		print("-------------------")
 		for j in range(0, len(coins)):
 			if coins[j] <= i:
 				dp[i] = min(dp[i], dp[i - coins[j]] + 1)
+				print("select > " + str(dp[i]))
 	return -1 if dp[amount] > amount else dp[amount]
 
 if __name__ == "__main__":
 	res =	coinChange2([1,2,5], 11)
 	print('result > ' + str(res)) 
 	# assert res == 3
-	res = coinChange2([2], 3)
-	print('result > ' + str(res))
+	# res = coinChange2([2], 3)
+	# print('result > ' + str(res))
 	# assert ret == -1
