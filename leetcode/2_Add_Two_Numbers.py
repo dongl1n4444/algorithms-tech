@@ -16,11 +16,36 @@ class ListNode:
 		self.next = None
 
 def addTwoNumbers(l1, l2):
-	n1 = []
-	n2 = []
-	while l1.next != None:
-		n1.append()
+	p1 = l1
+	p2 = l2
+	carry = 0
+	l3p = None
+	l3f = None
+	while p1 != None or p2 != None:
+		p1v = p1.val if p1 else 0
+		p2v = p2.val if p2 else 0
 
+		val = p1v + p2v + carry
+		carry = 0
+
+		n0 = val % 10
+		carry = val // 10
+		l3 = ListNode(n0)
+
+		if l3p != None:
+			l3p.next = l3
+		if l3f is None:
+			l3f = l3
+		l3p = l3
+
+		p1 = p1.next if p1 else None
+		p2 = p2.next if p2 else None
+	
+	if carry != 0:
+		l3 = ListNode(carry)
+		l3p.next = l3
+	
+	return l3f
 
 if __name__ == "__main__":
 	l10 = ListNode(2)
@@ -35,4 +60,15 @@ if __name__ == "__main__":
 	l20.next = l21
 	l21.next = l22
 
+	nums = addTwoNumbers(l10, l20)
+
+	l10 = ListNode(1)
+	l11 = ListNode(8)
+	l10.next = l11
+
+	l20 = ListNode(0)
+	nums = addTwoNumbers(l10, l20)
+
+	l10 = ListNode(5)
+	l20 = ListNode(5)
 	nums = addTwoNumbers(l10, l20)
