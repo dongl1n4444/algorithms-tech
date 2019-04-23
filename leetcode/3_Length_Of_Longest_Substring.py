@@ -20,7 +20,26 @@ Explanation: The answer is "wke", with the length of 3.
 """
 
 def lengthOfLongestSubstring(s):
-	pass
+	if s == None or len(s) == 0:
+		return 0
+	
+	ll = []
+	max = 0
+	count = 0
+	for i in range(0, len(s)):
+		if s[i] in ll:
+			if count > max:
+				max = count
+			ll = []
+			count = 0
+
+		count += 1
+		ll.append(s[i])
+		if count > max:
+			max = count
+				
+	return max
+	
 
 if __name__ == "__main__":
 	ret = lengthOfLongestSubstring("abcabcbb")
@@ -30,4 +49,10 @@ if __name__ == "__main__":
 	assert(ret == 1)
 
 	ret = lengthOfLongestSubstring("pwwkew")
+	assert(ret == 3)
+
+	ret = lengthOfLongestSubstring("aab")
+	assert(ret == 2)
+
+	ret = lengthOfLongestSubstring("dvdf")
 	assert(ret == 3)
