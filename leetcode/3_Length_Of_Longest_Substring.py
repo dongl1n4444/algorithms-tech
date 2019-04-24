@@ -23,22 +23,18 @@ def lengthOfLongestSubstring(s):
 	if s == None or len(s) == 0:
 		return 0
 	
-	ll = []
-	max = 0
-	count = 0
+	ret = 0
 	for i in range(0, len(s)):
-		if s[i] in ll:
-			if count > max:
-				max = count
-			ll = []
-			count = 0
-
-		count += 1
-		ll.append(s[i])
-		if count > max:
-			max = count
+		ll = []
+		for j in range(i, len(s)):
+			if s[j] in ll:
+				ret = max(ret, j - i)
+				break
 				
-	return max
+			ll.append(s[j])
+			ret = max(ret, j - i + 1)
+				
+	return ret
 	
 
 if __name__ == "__main__":
@@ -56,3 +52,6 @@ if __name__ == "__main__":
 
 	ret = lengthOfLongestSubstring("dvdf")
 	assert(ret == 3)
+
+	ret = lengthOfLongestSubstring(" ")
+	assert(ret == 0)
