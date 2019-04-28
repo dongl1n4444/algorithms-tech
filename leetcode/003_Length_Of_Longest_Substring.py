@@ -19,6 +19,7 @@ Explanation: The answer is "wke", with the length of 3.
 						 Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 """
 
+# force 解法
 def lengthOfLongestSubstring(s):
 	if s == None or len(s) == 0:
 		return 0
