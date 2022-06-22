@@ -15,7 +15,8 @@ namespace leetcode
         {
             Console.WriteLine("Hello World!");
             Solution s = new Solution();
-            TestTwoSum(s);
+            // TestTwoSum(s);
+            TestRomanToInteger(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -27,6 +28,16 @@ namespace leetcode
             Console.WriteLine("Input: nums = [3,2,4], target = 6\nOutput:" + ArrayToString(output));
             output = s.TwoSum(new int[]{3, 3}, 6);
             Console.WriteLine("Input: nums = [3,3], target = 6\nOutput:" + ArrayToString(output));
+        }
+
+        static void TestRomanToInteger(Solution s)
+        {
+            var output = s.RomanToInt("III");
+            Console.WriteLine("Input: s = \"III\"\nOutput:" + output);
+            output = s.RomanToInt("LVIII");
+            Console.WriteLine("Input:s = \"LVIII\"\nOutput:" + output);
+            output = s.RomanToInt("MCMXCIV");
+            Console.WriteLine("Input: \"MCMXCIV\"\nOutput:" + output);
         }
     }
 }
