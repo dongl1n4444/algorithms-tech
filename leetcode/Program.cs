@@ -16,7 +16,8 @@ namespace leetcode
             Console.WriteLine("Hello World!");
             Solution s = new Solution();
             // TestTwoSum(s);
-            TestRomanToInteger(s);
+            // TestRomanToInteger(s);
+            TestAddTowNumbers(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -38,6 +39,14 @@ namespace leetcode
             Console.WriteLine("Input:s = \"LVIII\"\nOutput:" + output);
             output = s.RomanToInt("MCMXCIV");
             Console.WriteLine("Input: \"MCMXCIV\"\nOutput:" + output);
+        }
+
+        static void TestAddTowNumbers(Solution s)
+        {
+            var output = s.AddTwoNumbers(ListNode.Create(new int[]{2,4,3}), ListNode.Create(new int[]{5,6,4}));
+            Console.WriteLine("Input: l1 = [2,4,3], l2 = [5,6,4]\nOutput:" + output);
+            output = s.AddTwoNumbers(ListNode.Create(new int[]{9,9,9,9,9,9,9}), ListNode.Create(new int[]{9,9,9,9}));
+            Console.WriteLine("Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput:" + output);
         }
     }
 }
