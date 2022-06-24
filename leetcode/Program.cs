@@ -17,7 +17,8 @@ namespace leetcode
             Solution s = new Solution();
             // TestTwoSum(s);
             // TestRomanToInteger(s);
-            TestAddTowNumbers(s);
+            // TestAddTowNumbers(s);
+            TestLengthOfLongestSubstring(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -47,6 +48,26 @@ namespace leetcode
             Console.WriteLine("Input: l1 = [2,4,3], l2 = [5,6,4]\nOutput:" + output);
             output = s.AddTwoNumbers(ListNode.Create(new int[]{9,9,9,9,9,9,9}), ListNode.Create(new int[]{9,9,9,9}));
             Console.WriteLine("Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput:" + output);
+        }
+
+        static void TestLengthOfLongestSubstring(Solution s)
+        {
+            var output = s.LengthOfLongestSubstring("abcabcbb");
+            Console.WriteLine("Input: s = \"abcabcbb\"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring("bbbbb");
+            Console.WriteLine("Input: s = \"bbbbb\"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring("pwwkew");
+            Console.WriteLine("Input: s = \"pwwkew\"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring(" ");
+            Console.WriteLine("Input: s = \" \"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring("");
+            Console.WriteLine("Input: s = \"\"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring("au");
+            Console.WriteLine("Input: s = \"au\"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring("dvdf");
+            Console.WriteLine("Input: s = \"dvdf\"\nOutput:" + output);
+            output = s.LengthOfLongestSubstring("abba");
+            Console.WriteLine("Input: s = \"abba\"\nOutput:" + output);
         }
     }
 }
