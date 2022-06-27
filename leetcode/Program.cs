@@ -4,9 +4,9 @@ using System.Diagnostics;
 
 namespace leetcode
 {
-    class Program
+    public class Program
     {
-        static string ArrayToString<T>(T[] values)
+        public static string ArrayToString<T>(T[] values)
         {
             return string.Format("[{0}]", string.Join(",", values.Select(x => x.ToString()).ToArray()));
         }
@@ -18,7 +18,8 @@ namespace leetcode
             // TestTwoSum(s);
             // TestRomanToInteger(s);
             // TestAddTowNumbers(s);
-            TestLengthOfLongestSubstring(s);
+            // TestLengthOfLongestSubstring(s);
+            TestFindMedianSortedArrays(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -68,6 +69,22 @@ namespace leetcode
             Console.WriteLine("Input: s = \"dvdf\"\nOutput:" + output);
             output = s.LengthOfLongestSubstring("abba");
             Console.WriteLine("Input: s = \"abba\"\nOutput:" + output);
+        }
+
+        static void TestFindMedianSortedArrays(Solution s)
+        {
+            var output = s.FindMedianSortedArrays(new int[]{1,3}, new int[]{2});
+            Console.WriteLine("nums1 = [1,3], nums2 = [2]\nOutput:" + output);
+            output = s.FindMedianSortedArrays(new int[]{1,2}, new int[]{3,4});
+            Console.WriteLine("nums1 = [1,2], nums2 = [3,4]\nOutput:" + output);
+            output = s.FindMedianSortedArrays(new int[]{0,0,0,0,0}, new int[]{-1,0,0,0,0,0,1});
+            Console.WriteLine("nums1 = [1,3], nums2 = [2]\nOutput:" + output);
+            output = s.FindMedianSortedArrays(new int[]{-1,0,0,0,0,0,1}, new int[]{0,0,0,0,0});
+            Console.WriteLine("nums1 = [1,3], nums2 = [2]\nOutput:" + output);
+            output = s.FindMedianSortedArrays(new int[]{}, new int[]{1});
+            Console.WriteLine("nums1 = [], nums2 = [1]\nOutput:" + output);
+            output = s.FindMedianSortedArrays(new int[]{1}, new int[]{1});
+            Console.WriteLine("nums1 = [1], nums2 = [1]\nOutput:" + output);
         }
     }
 }
