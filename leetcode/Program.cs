@@ -19,7 +19,8 @@ namespace leetcode
             // TestRomanToInteger(s);
             // TestAddTowNumbers(s);
             // TestLengthOfLongestSubstring(s);
-            TestFindMedianSortedArrays(s);
+            // TestFindMedianSortedArrays(s);
+            TestLongestPalindrome(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -85,6 +86,20 @@ namespace leetcode
             Console.WriteLine("nums1 = [], nums2 = [1]\nOutput:" + output);
             output = s.FindMedianSortedArrays(new int[]{1}, new int[]{1});
             Console.WriteLine("nums1 = [1], nums2 = [1]\nOutput:" + output);
+        }
+
+        static void TestLongestPalindrome(Solution s)
+        {
+            var output = s.LongestPalindrome("babad");
+            Console.WriteLine("Input: s = \"babad\"\nOutput:" + output);
+            output = s.LongestPalindrome("cbbd");
+            Console.WriteLine("Input: s = \"cbbd\"\nOutput:" + output);
+            output = s.LongestPalindrome("a");
+            Console.WriteLine("Input: s = \"a\"\nOutput:" + output);
+            output = s.LongestPalindrome("abcba");
+            Console.WriteLine("Input: s = \"abcba\"\nOutput:" + output);
+            output = s.LongestPalindrome("aacabdkacaa");
+            Console.WriteLine("Input: s = \"aacabdkacaa\"\nOutput:" + output);
         }
     }
 }
