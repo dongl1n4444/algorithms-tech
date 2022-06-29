@@ -20,7 +20,8 @@ namespace leetcode
             // TestAddTowNumbers(s);
             // TestLengthOfLongestSubstring(s);
             // TestFindMedianSortedArrays(s);
-            TestLongestPalindrome(s);
+            // TestLongestPalindrome(s);
+            TestZigzagConvert(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -100,6 +101,16 @@ namespace leetcode
             Console.WriteLine("Input: s = \"abcba\"\nOutput:" + output);
             output = s.LongestPalindrome("aacabdkacaa");
             Console.WriteLine("Input: s = \"aacabdkacaa\"\nOutput:" + output);
+        }
+
+        static void TestZigzagConvert(Solution s)
+        {
+            var output = s.ZigzagConvert("PAYPALISHIRING", 3);
+            Console.WriteLine("Input: s = \"PAYPALISHIRING\", numRows = 3\nOutput:" + output);
+            output = s.ZigzagConvert("PAYPALISHIRING", 4);
+            Console.WriteLine("Input: s = \"PAYPALISHIRING\", numRows = 4\nOutput:" + output);
+            output = s.ZigzagConvert("A", 1);
+            Console.WriteLine("Input: s = \"A\", numRows = 1\nOutput:" + output);
         }
     }
 }
