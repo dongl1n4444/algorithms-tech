@@ -21,7 +21,8 @@ namespace leetcode
             // TestLengthOfLongestSubstring(s);
             // TestFindMedianSortedArrays(s);
             // TestLongestPalindrome(s);
-            TestZigzagConvert(s);
+            // TestZigzagConvert(s);
+            TestReverseInteger(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -111,6 +112,22 @@ namespace leetcode
             Console.WriteLine("Input: s = \"PAYPALISHIRING\", numRows = 4\nOutput:" + output);
             output = s.ZigzagConvert("A", 1);
             Console.WriteLine("Input: s = \"A\", numRows = 1\nOutput:" + output);
+        }
+
+        static void TestReverseInteger(Solution s)
+        {
+            var output = s.ReverseInteger(123);
+            Console.WriteLine("Input: x = 123\nOutput:" + output);
+            output = s.ReverseInteger(-123);
+            Console.WriteLine("Input: x = -123\nOutput:" + output);
+            output = s.ReverseInteger(120);
+            Console.WriteLine("Input: x = 120\nOutput:" + output);
+            output = s.ReverseInteger(1534236469);
+            Console.WriteLine("Input: x = 1534236469\nOutput:" + output);
+            output = s.ReverseInteger(-2147483648);
+            Console.WriteLine("Input: x = -2147483648\nOutput:" + output);
+            output = s.ReverseInteger(-2147483412);
+            Console.WriteLine("Input: x = -2147483412\nOutput:" + output);
         }
     }
 }
