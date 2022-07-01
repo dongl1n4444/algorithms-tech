@@ -22,7 +22,8 @@ namespace leetcode
             // TestFindMedianSortedArrays(s);
             // TestLongestPalindrome(s);
             // TestZigzagConvert(s);
-            TestReverseInteger(s);
+            // TestReverseInteger(s);
+            TestMyAtoi(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -128,6 +129,22 @@ namespace leetcode
             Console.WriteLine("Input: x = -2147483648\nOutput:" + output);
             output = s.ReverseInteger(-2147483412);
             Console.WriteLine("Input: x = -2147483412\nOutput:" + output);
+        }
+
+        static void TestMyAtoi(Solution s)
+        {
+            var output = s.MyAtoi("42");
+            Console.WriteLine("Input: s = \"42\"\nOutput:" + output);
+            output = s.MyAtoi("   -42");
+            Console.WriteLine("Input: s = \"   -42\"\nOutput:" + output);
+            output = s.MyAtoi("4193 with words");
+            Console.WriteLine("Input: s = \"4193 with words\"\nOutput:" + output);
+            output = s.MyAtoi("words and 987");
+            Console.WriteLine("Input: s = \"words and 987\"\nOutput:" + output);
+            output = s.MyAtoi("-91283472332");
+            Console.WriteLine("Input: s = \"-91283472332\"\nOutput:" + output);
+            output = s.MyAtoi("3.14159");
+            Console.WriteLine("Input: s = \"3.14159\"\nOutput:" + output);
         }
     }
 }
