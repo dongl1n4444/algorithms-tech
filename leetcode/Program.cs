@@ -23,7 +23,7 @@ namespace leetcode
             // TestLongestPalindrome(s);
             // TestZigzagConvert(s);
             // TestReverseInteger(s);
-            TestMyAtoi(s);
+            // TestMyAtoi(s);
         }
 
         static void TestTwoSum(Solution s)
