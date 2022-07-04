@@ -24,6 +24,7 @@ namespace leetcode
             // TestZigzagConvert(s);
             // TestReverseInteger(s);
             // TestMyAtoi(s);
+            TestCandy(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -145,6 +146,16 @@ namespace leetcode
             Console.WriteLine("Input: s = \"-91283472332\"\nOutput:" + output);
             output = s.MyAtoi("3.14159");
             Console.WriteLine("Input: s = \"3.14159\"\nOutput:" + output);
+        }
+
+        static void TestCandy(Solution s)
+        {
+            var output = s.Candy(new int[]{1, 0, 2});
+            Console.WriteLine("Input: ratings = [1,0,2]\nOutput:" + output);
+            output = s.Candy(new int[]{1, 2, 2});
+            Console.WriteLine("Input: ratings = [1,2,2]\nOutput:" + output);
+            output = s.Candy(new int[]{1,3,4,5,2});
+            Console.WriteLine("Input: ratings = [1,3,4,5,2]\nOutput:" + output);
         }
     }
 }
