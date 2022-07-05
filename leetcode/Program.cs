@@ -24,7 +24,8 @@ namespace leetcode
             // TestZigzagConvert(s);
             // TestReverseInteger(s);
             // TestMyAtoi(s);
-            TestCandy(s);
+            // TestCandy(s);
+            TestLongestConsecutive(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -156,6 +157,14 @@ namespace leetcode
             Console.WriteLine("Input: ratings = [1,2,2]\nOutput:" + output);
             output = s.Candy(new int[]{1,3,4,5,2});
             Console.WriteLine("Input: ratings = [1,3,4,5,2]\nOutput:" + output);
+        }
+
+        static void TestLongestConsecutive(Solution s)
+        {
+            var output = s.LongestConsecutive(new int[]{100,4,200,1,3,2});
+            Console.WriteLine("Input: nums = [100,4,200,1,3,2]\nOutput:" + output);
+            output = s.LongestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1});
+            Console.WriteLine("Input: nums = [0,3,7,2,5,8,4,6,0,1]\nOutput:" + output);
         }
     }
 }
