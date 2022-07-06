@@ -25,7 +25,8 @@ namespace leetcode
             // TestReverseInteger(s);
             // TestMyAtoi(s);
             // TestCandy(s);
-            TestLongestConsecutive(s);
+            // TestLongestConsecutive(s);
+            TestFib(s);
         }
 
         static void TestTwoSum(Solution s)
@@ -165,6 +166,14 @@ namespace leetcode
             Console.WriteLine("Input: nums = [100,4,200,1,3,2]\nOutput:" + output);
             output = s.LongestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1});
             Console.WriteLine("Input: nums = [0,3,7,2,5,8,4,6,0,1]\nOutput:" + output);
+        }
+
+        static void TestFib(Solution s)
+        {
+            var output = s.Fib(2);
+            Console.WriteLine("Input: n = 2\nOutput:" + output);
+            output = s.Fib(3);
+            Console.WriteLine("Input: n = 3\nOutput:" + output);
         }
     }
 }
