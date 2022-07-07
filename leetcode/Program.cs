@@ -26,7 +26,18 @@ namespace leetcode
             // TestMyAtoi(s);
             // TestCandy(s);
             // TestLongestConsecutive(s);
-            TestFib(s);
+            // TestFib(s);
+            TestIsInterleave(s);
+        }
+
+        static void TestIsInterleave(Solution s)
+        {
+            var output = s.IsInterleave("aabcc", "dbbca", "aadbbcbcac");
+            Console.WriteLine("Input: s1 = aabcc, s2 = dbbca, s3 = aadbbcbcac\nOutput:" + output);
+            output = s.IsInterleave("aabcc", "dbbca", "aadbbbaccc");
+            Console.WriteLine("Input: s1 = aabcc, s2 = dbbca, s3 = aadbbbaccc\nOutput:" + output);
+            output = s.IsInterleave("", "", "");
+            Console.WriteLine("Input: s1 = , s2 = , s3 = \nOutput:" + output);
         }
 
         static void TestTwoSum(Solution s)
