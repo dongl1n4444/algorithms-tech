@@ -27,7 +27,16 @@ namespace leetcode
             // TestCandy(s);
             // TestLongestConsecutive(s);
             // TestFib(s);
-            TestIsInterleave(s);
+            // TestIsInterleave(s);
+            TestUniquePathsWithObstacles(s);
+        }
+
+        static void TestUniquePathsWithObstacles(Solution s)
+        {
+            var output = s.UniquePathsWithObstacles(new int[][]{new int[]{0,0,0}, new int[]{0,1,0}, new int[]{0,0,0}});
+            Console.WriteLine("Input: obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]\nOutput:" + output);
+            output = s.UniquePathsWithObstacles(new int[][]{new int[]{0,1}, new int[]{0,0}});
+            Console.WriteLine("Input: obstacleGrid = [[0,1],[0,0]]\nOutput:" + output);
         }
 
         static void TestIsInterleave(Solution s)
