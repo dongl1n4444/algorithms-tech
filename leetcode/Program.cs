@@ -28,7 +28,34 @@ namespace leetcode
             // TestLongestConsecutive(s);
             // TestFib(s);
             // TestIsInterleave(s);
-            TestUniquePathsWithObstacles(s);
+            // TestUniquePathsWithObstacles(s);
+            TestRightSideView(s);
+        }
+
+        static void TestRightSideView(Solution s)
+        {
+            var t5 = new TreeNode(5);
+            var t4 = new TreeNode(4);
+            var t2 = new TreeNode(2, null, t5);
+            var t3 = new TreeNode(3, null, t4);
+            var t1 = new TreeNode(1, t2, t3);
+
+            var output = s.RightSideView(t1);
+            Console.WriteLine("Input: root = [1,2,3,null,5,null,4]\nOutput:" + ArrayToString<int>(output.ToArray()));
+
+
+            var tt3 = new TreeNode(3);
+            var tt1 = new TreeNode(1, null, tt3);
+            output = s.RightSideView(tt1);
+            Console.WriteLine("Input: root = [1,null,3]\nOutput:" + ArrayToString<int>(output.ToArray()));
+        
+            output = s.RightSideView(null);
+            Console.WriteLine("Input: root = []\nOutput:" + ArrayToString<int>(output.ToArray()));
+
+            t2 = new TreeNode(2);
+            t1 = new TreeNode(1, t2);
+            output = s.RightSideView(t1);
+            Console.WriteLine("Input: root = [1,2]\nOutput:" + ArrayToString<int>(output.ToArray()));
         }
 
         static void TestUniquePathsWithObstacles(Solution s)
