@@ -29,7 +29,18 @@ namespace leetcode
             // TestFib(s);
             // TestIsInterleave(s);
             // TestUniquePathsWithObstacles(s);
-            TestRightSideView(s);
+            // TestRightSideView(s);
+            TestIsPalindrome(s);
+        }
+
+        static void TestIsPalindrome(Solution s)
+        {
+            var output = s.IsPalindrome(121);
+            Console.WriteLine("Input: x = 121\nOutput:" + output);
+            output = s.IsPalindrome(-121);
+            Console.WriteLine("Input: x = -121\nOutput:" + output);
+            output = s.IsPalindrome(10);
+            Console.WriteLine("Input: x = 10\nOutput:" + output);
         }
 
         static void TestRightSideView(Solution s)
