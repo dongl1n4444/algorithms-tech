@@ -30,7 +30,27 @@ namespace leetcode
             // TestIsInterleave(s);
             // TestUniquePathsWithObstacles(s);
             // TestRightSideView(s);
-            TestIsPalindrome(s);
+            // TestIsPalindrome(s);
+            TestLevelOrder(s);
+        }
+
+        static void TestLevelOrder(Solution s)
+        {
+            var t4 = new TreeNode(15);
+            var t5 = new TreeNode(7);
+            var t2 = new TreeNode(9);
+            var t3 = new TreeNode(20, t4, t5);
+            var t1 = new TreeNode(3, t2, t3);
+
+            var output = s.LevelOrder(t1);
+            // Console.WriteLine("Input: root = [3,9,20,null,null,15,7]\nOutput:" + ArrayToString<int>(output.ToArray()));
+
+            t1 = new TreeNode(1);
+            output = s.LevelOrder(t1);
+            // Console.WriteLine("Input: root = [1]\nOutput:" + ArrayToString<int>(output.ToArray()));
+        
+            output = s.LevelOrder(null);
+            // Console.WriteLine("Input: root = []\nOutput:" + ArrayToString<int>(output.ToArray()));
         }
 
         static void TestIsPalindrome(Solution s)
