@@ -31,7 +31,16 @@ namespace leetcode
             // TestUniquePathsWithObstacles(s);
             // TestRightSideView(s);
             // TestIsPalindrome(s);
-            TestLevelOrder(s);
+            // TestLevelOrder(s);
+            TestBuildTree(s);
+        }
+
+        static void TestBuildTree(Solution s)
+        {
+            var output = s.BuildTree(new int[]{3,9,20,15,7}, new int[]{9,3,15,20,7});
+            // Console.WriteLine("Input: root = [3,9,20,null,null,15,7]\nOutput:" + ArrayToString<int>(output.ToArray()));
+            output = s.BuildTree(new int[]{-1}, new int[]{-1});
+            // Console.WriteLine("Input: root = [3,9,20,null,null,15,7]\nOutput:" + ArrayToString<int>(output.ToArray()));
         }
 
         static void TestLevelOrder(Solution s)
