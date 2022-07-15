@@ -32,7 +32,26 @@ namespace leetcode
             // TestRightSideView(s);
             // TestIsPalindrome(s);
             // TestLevelOrder(s);
-            TestBuildTree(s);
+            // TestBuildTree(s);
+            TestMaxAreaOfIsland(s);
+        }
+
+        static void TestMaxAreaOfIsland(Solution s)
+        {
+            var output = s.MaxAreaOfIsland(new int[][]{
+                new int[]{0,0,1,0,0,0,0,1,0,0,0,0,0},
+                new int[]{0,0,0,0,0,0,0,1,1,1,0,0,0},
+                new int[]{0,1,1,0,1,0,0,0,0,0,0,0,0},
+                new int[]{0,1,0,0,1,1,0,0,1,0,1,0,0},
+                new int[]{0,1,0,0,1,1,0,0,1,1,1,0,0},
+                new int[]{0,0,0,0,0,0,0,0,0,0,1,0,0},
+                new int[]{0,0,0,0,0,0,0,1,1,1,0,0,0},
+                new int[]{0,0,0,0,0,0,0,1,1,0,0,0,0},
+            });
+            Console.WriteLine("Input: root = [3,9,20,null,null,15,7]\nOutput:" + output);
+           
+            output = s.MaxAreaOfIsland(new int[][]{new int[]{0,0,0,0,0,0,0,0}});
+            Console.WriteLine("Input: root = [3,9,20,null,null,15,7]\nOutput:" + output);
         }
 
         static void TestBuildTree(Solution s)
