@@ -6,6 +6,17 @@ namespace leetcode
 {
     public class Program
     {
+        public static long GetTimeStamp()
+        {
+            TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            return Convert.ToInt64(ts.TotalSeconds);
+        }
+
+        public static long TimeEslapsed(long s)
+        {
+            return GetTimeStamp() - s;
+        }
+
         public static string ArrayToString<T>(T[] values)
         {
             return string.Format("[{0}]", string.Join(",", values.Select(x => x.ToString()).ToArray()));
@@ -33,7 +44,22 @@ namespace leetcode
             // TestIsPalindrome(s);
             // TestLevelOrder(s);
             // TestBuildTree(s);
-            TestMaxAreaOfIsland(s);
+            // TestMaxAreaOfIsland(s);
+            TestFindPaths(s);
+        }
+
+        static void TestFindPaths(Solution s)
+        {
+            var output = s.FindPaths(2, 2, 2, 0, 0);
+            Console.WriteLine("Input: m = 2, n = 2, maxMove = 2, startRow = 0, startColumn = 0\nOutput:" + output);
+            output = s.FindPaths(1, 3, 3, 0, 1);
+            Console.WriteLine("Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1\nOutput:" + output);
+            var ts = GetTimeStamp();
+            output = s.FindPaths(8, 7, 16, 1, 5);
+            Console.WriteLine("Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1\nOutput:" + output + "\nTime:" + TimeEslapsed(ts));
+            ts = GetTimeStamp();
+            output = s.FindPaths(8, 50, 23, 5, 26);
+            Console.WriteLine("Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1\nOutput:" + output + "\nTime:" + TimeEslapsed(ts));
         }
 
         static void TestMaxAreaOfIsland(Solution s)
