@@ -45,7 +45,16 @@ namespace leetcode
             // TestLevelOrder(s);
             // TestBuildTree(s);
             // TestMaxAreaOfIsland(s);
-            TestFindPaths(s);
+            // TestFindPaths(s);
+            Test11MaxArea(s);
+        }
+
+        static void Test11MaxArea(Solution s)
+        {
+            var output = s.MaxArea(new int[]{1,8,6,2,5,4,8,3,7});
+            Console.WriteLine("Input: [1,8,6,2,5,4,8,3,7]\nOutput:" + output);
+            output = s.MaxArea(new int[]{1,1});
+            Console.WriteLine("Input: [1,1]\nOutput:" + output);
         }
 
         static void TestFindPaths(Solution s)
