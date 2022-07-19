@@ -46,7 +46,16 @@ namespace leetcode
             // TestBuildTree(s);
             // TestMaxAreaOfIsland(s);
             // TestFindPaths(s);
-            Test11MaxArea(s);
+            // Test11MaxArea(s);
+            Test118PascalsTriangle(s);
+        }
+
+        static void Test118PascalsTriangle(Solution s)
+        {
+            var output = s.PascalsTriangle(5);
+            // Console.WriteLine("Input: 5\nOutput:" + output);
+            output = s.PascalsTriangle(1);
+            // Console.WriteLine("Input: 1\nOutput:" + output);
         }
 
         static void Test11MaxArea(Solution s)
