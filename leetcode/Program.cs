@@ -53,10 +53,13 @@ namespace leetcode
 
         static void Test792NumMatchingSubseq(Solution s)
         {
-            var output = s.NumMatchingSubseq("abcde", new string[]{"a","bb","acd","ace"});
-            Console.WriteLine("Input: 5\nOutput:" + output);
+            var output = s.NumMatchingSubseq("rwpddkvbnnuglnagtvamxkqtwhqgwbqgfbvgkwyuqkdwhzudsxvjubjgloeofnpjqlkdsqvruvabjrikfwronbrdyyjnakstqjac", new string[]{"wpddkvbnn","lnagtva","kvbnnuglnagtvamxkqtwhqgwbqgfbvgkwyuqkdwhzudsxvju","rwpddkvbnnugln","gloeofnpjqlkdsqvruvabjrikfwronbrdyyj","vbgeinupkvgmgxeaaiuiyojmoqkahwvbpwugdainxciedbdkos","mspuhbykmmumtveoighlcgpcapzczomshiblnvhjzqjlfkpina","rgmliajkiknongrofpugfgajedxicdhxinzjakwnifvxwlokip","fhepktaipapyrbylskxddypwmuuxyoivcewzrdwwlrlhqwzikq","qatithxifaaiwyszlkgoljzkkweqkjjzvymedvclfxwcezqebx"});
+            Console.WriteLine("Input: s = \"abcde\", words = [a,bb,acd,ace]\nOutput:" + output);
+
+            output = s.NumMatchingSubseq("abcde", new string[]{"a","bb","acd","ace"});
+            Console.WriteLine("Input: s = \"abcde\", words = [a,bb,acd,ace]\nOutput:" + output);
             output = s.NumMatchingSubseq("dsahjpjauf", new string[]{"ahjpjau","ja","ahbwzgqnuk","tnmlanowax"});
-            Console.WriteLine("Input: 1\nOutput:" + output);
+            Console.WriteLine("Input: s = dsahjpjauf, words = [ahjpjau,ja,ahbwzgqnuk,tnmlanowax]\nOutput:" + output);
         }
 
         static void Test118PascalsTriangle(Solution s)
