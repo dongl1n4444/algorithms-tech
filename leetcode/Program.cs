@@ -47,7 +47,16 @@ namespace leetcode
             // TestMaxAreaOfIsland(s);
             // TestFindPaths(s);
             // Test11MaxArea(s);
-            Test118PascalsTriangle(s);
+            // Test118PascalsTriangle(s);
+            Test792NumMatchingSubseq(s);
+        }
+
+        static void Test792NumMatchingSubseq(Solution s)
+        {
+            var output = s.NumMatchingSubseq("abcde", new string[]{"a","bb","acd","ace"});
+            Console.WriteLine("Input: 5\nOutput:" + output);
+            output = s.NumMatchingSubseq("dsahjpjauf", new string[]{"ahjpjau","ja","ahbwzgqnuk","tnmlanowax"});
+            Console.WriteLine("Input: 1\nOutput:" + output);
         }
 
         static void Test118PascalsTriangle(Solution s)
