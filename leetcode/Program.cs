@@ -48,7 +48,27 @@ namespace leetcode
             // TestFindPaths(s);
             // Test11MaxArea(s);
             // Test118PascalsTriangle(s);
-            Test792NumMatchingSubseq(s);
+            // Test792NumMatchingSubseq(s);
+            Test92ReverseBetween(s);
+        }
+
+        static void Test92ReverseBetween(Solution s)
+        {
+            var head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+            var output = s.ReverseBetween(head, 2, 4);
+            Console.WriteLine("Input: head = [1,2,3,4,5], left = 2, right = 4\nOutput:" + output);
+           
+            head = new ListNode(5);
+            output = s.ReverseBetween(head, 1, 1);
+            Console.WriteLine("Input: head = [5], left = 1, right = 1\nOutput:" + output);
+        
+            head = new ListNode(3, new ListNode(5));
+            output = s.ReverseBetween(head, 2, 2);
+            Console.WriteLine("Input: head = [5], left = 1, right = 1\nOutput:" + output);
+
+            head = new ListNode(3, new ListNode(5));
+            output = s.ReverseBetween(head, 1, 2);
+            Console.WriteLine("Input: head = [5], left = 1, right = 1\nOutput:" + output);
         }
 
         static void Test792NumMatchingSubseq(Solution s)
