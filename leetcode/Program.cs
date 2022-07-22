@@ -49,7 +49,23 @@ namespace leetcode
             // Test11MaxArea(s);
             // Test118PascalsTriangle(s);
             // Test792NumMatchingSubseq(s);
-            Test92ReverseBetween(s);
+            // Test92ReverseBetween(s);
+            Test86Partition(s);
+        }
+
+        static void Test86Partition(Solution s)
+        {
+            var head = new ListNode(1, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(5, new ListNode(2))))));
+            var output = s.Partition(head, 3);
+            Console.WriteLine("Input: head = [1,2,3,4,5], left = 2, right = 4\nOutput:" + output);
+
+            head = new ListNode(2, new ListNode(1));
+            output = s.Partition(head, 2);
+            Console.WriteLine("Input: head = [1,2,3,4,5], left = 2, right = 4\nOutput:" + output);
+
+            head = new ListNode(1, new ListNode(1));
+            output = s.Partition(head, 2);
+            Console.WriteLine("Input: head = [1,2,3,4,5], left = 2, right = 4\nOutput:" + output);
         }
 
         static void Test92ReverseBetween(Solution s)
