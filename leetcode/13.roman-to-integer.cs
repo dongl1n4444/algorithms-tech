@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 public partial class Solution {
 
-    private static Dictionary<char, int> RomanToIntIdxs = new Dictionary<char, int>()
+    public static Dictionary<char, int> RomanToIntIdxs = new Dictionary<char, int>()
     {
         {'I', 1},
         {'V', 5},

@@ -50,7 +50,20 @@ namespace leetcode
             // Test118PascalsTriangle(s);
             // Test792NumMatchingSubseq(s);
             // Test92ReverseBetween(s);
-            Test86Partition(s);
+            // Test86Partition(s);
+            Test12IntToRoman(s);
+        }
+
+        static void Test12IntToRoman(Solution s)
+        {
+            var output = s.IntToRoman(3);
+            Console.WriteLine("Input: num = 3\nOutput:" + output);
+            output = s.IntToRoman(58);
+            Console.WriteLine("Input: num = 58\nOutput:" + output);
+            output = s.IntToRoman(1994);
+            Console.WriteLine("Input: num = 1994\nOutput:" + output);
+            output = s.IntToRoman(20);
+            Console.WriteLine("Input: num = 20\nOutput:" + output);
         }
 
         static void Test86Partition(Solution s)
