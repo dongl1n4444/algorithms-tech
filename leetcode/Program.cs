@@ -51,7 +51,18 @@ namespace leetcode
             // Test792NumMatchingSubseq(s);
             // Test92ReverseBetween(s);
             // Test86Partition(s);
-            Test12IntToRoman(s);
+            // Test12IntToRoman(s);
+            Test34SearchRange(s);
+        }
+
+        static void Test34SearchRange(Solution s)
+        {
+            var output = s.SearchRange(new int[]{5,7,7,8,8,10}, 8);
+            Console.WriteLine("Input: nums = [5,7,7,8,8,10], target = 8\nOutput:" + ArrayToString<int>(output));
+            output = s.SearchRange(new int[]{5,7,7,8,8,10}, 6);
+            Console.WriteLine("Input: nums = [5,7,7,8,8,10], target = 6\nOutput:" + ArrayToString<int>(output));
+            output = s.SearchRange(new int[]{1}, 1);
+            Console.WriteLine("Input: nums = [], target = 0\nOutput:" + ArrayToString<int>(output));
         }
 
         static void Test12IntToRoman(Solution s)
