@@ -52,7 +52,17 @@ namespace leetcode
             // Test92ReverseBetween(s);
             // Test86Partition(s);
             // Test12IntToRoman(s);
-            Test34SearchRange(s);
+            // Test34SearchRange(s);
+            Test236LowestCommonAncestor(s);
+        }
+
+        static void Test236LowestCommonAncestor(Solution s)
+        {
+            var p = new TreeNode(5, new TreeNode(6), new TreeNode(2, new TreeNode(7), new TreeNode(4)));
+            var q = new TreeNode(1, new TreeNode(0), new TreeNode(8));
+            var root = new TreeNode(3, p, q);
+            var output = s.LowestCommonAncestor(root, p, q);
+            Console.WriteLine("Input: nums = [5,7,7,8,8,10], target = 8\nOutput:" + output.val);
         }
 
         static void Test34SearchRange(Solution s)
