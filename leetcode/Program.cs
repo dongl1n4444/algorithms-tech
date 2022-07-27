@@ -53,7 +53,19 @@ namespace leetcode
             // Test86Partition(s);
             // Test12IntToRoman(s);
             // Test34SearchRange(s);
-            Test236LowestCommonAncestor(s);
+            // Test236LowestCommonAncestor(s);
+            Test114Flatten(s);
+        }
+
+        static void Test114Flatten(Solution s)
+        {
+            var root = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)), new TreeNode(5, null, new TreeNode(6)));
+            s.Flatten(root);
+            // Console.WriteLine("Input: nums = [5,7,7,8,8,10], target = 8\nOutput:" + output.val);
+            root = null;
+            s.Flatten(root);
+            root = new TreeNode(0);
+            s.Flatten(root);
         }
 
         static void Test236LowestCommonAncestor(Solution s)
