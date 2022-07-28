@@ -54,7 +54,16 @@ namespace leetcode
             // Test12IntToRoman(s);
             // Test34SearchRange(s);
             // Test236LowestCommonAncestor(s);
-            Test114Flatten(s);
+            // Test114Flatten(s);
+            Test242IsAnagram(s);
+        }
+
+        static void Test242IsAnagram(Solution s)
+        {
+            var output = s.IsAnagram("anagram", "nagaram");
+            Console.WriteLine("Input: s = anagram, t = nagaram\nOutput:" + output);
+            output = s.IsAnagram("rat", "car");
+            Console.WriteLine("Input: s = rat, t = car\nOutput:" + output);
         }
 
         static void Test114Flatten(Solution s)
