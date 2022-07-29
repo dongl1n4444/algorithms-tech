@@ -55,7 +55,16 @@ namespace leetcode
             // Test34SearchRange(s);
             // Test236LowestCommonAncestor(s);
             // Test114Flatten(s);
-            Test242IsAnagram(s);
+            // Test242IsAnagram(s);
+            Test890FindAndReplacePattern(s);
+        }
+
+        static void Test890FindAndReplacePattern(Solution s)
+        {
+            var output = s.FindAndReplacePattern(new string[]{"abc","deq","mee","aqq","dkd","ccc"}, "abb");
+            Console.WriteLine("Input: words = [abc,deq,mee,aqq,dkd,ccc], pattern = abb\nOutput:" + ArrayToString<string>(output.ToArray()));
+            output = s.FindAndReplacePattern(new string[]{"a","b","c"}, "a");
+            Console.WriteLine("Input: words = [a,b,c], pattern = a\nOutput:" + ArrayToString<string>(output.ToArray()));
         }
 
         static void Test242IsAnagram(Solution s)
