@@ -22,6 +22,11 @@ namespace leetcode
             return string.Format("[{0}]", string.Join(",", values.Select(x => x.ToString()).ToArray()));
         }
 
+        public static void Log(string kk)
+        {
+            Console.WriteLine(kk);
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -56,7 +61,17 @@ namespace leetcode
             // Test236LowestCommonAncestor(s);
             // Test114Flatten(s);
             // Test242IsAnagram(s);
-            Test890FindAndReplacePattern(s);
+            // Test890FindAndReplacePattern(s);
+            Test62UniquePaths(s);
+        }
+
+        static void Test62UniquePaths(Solution s)
+        {
+            var output = s.UniquePaths(3, 2);
+            Console.WriteLine("Input: m = 3, n = 2\nOutput:" + output);
+            var t0 = GetTimeStamp();
+            output = s.UniquePaths(23, 12);
+            Console.WriteLine("Input: m = 23, n = 12\nOutput:" + output + "-" + TimeEslapsed(t0));
         }
 
         static void Test890FindAndReplacePattern(Solution s)
