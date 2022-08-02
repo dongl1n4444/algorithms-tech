@@ -17,6 +17,9 @@ public partial class Solution {
             for (int i = 0; i < matrix.Length; ++i)
             {
                 var j = pp[i];
+                if (j >= colLength)
+                    continue;
+
                 if (matrix[i][j] < minVal)
                 {
                     minValI = i;
@@ -25,8 +28,14 @@ public partial class Solution {
             }
             pp[minValI] += 1;
             k -= 1;
+
+            if (k == 0)
+            {
+                return matrix[minValI][pp[minValI] - 1];
+            }
         }
-        return pp[0];
+
+        return 0;
     }
 }
 // @lc code=end
