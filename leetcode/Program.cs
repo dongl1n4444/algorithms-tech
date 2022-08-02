@@ -62,7 +62,28 @@ namespace leetcode
             // Test114Flatten(s);
             // Test242IsAnagram(s);
             // Test890FindAndReplacePattern(s);
-            Test62UniquePaths(s);
+            // Test62UniquePaths(s);
+            Test378KthSmallest(s);
+        }
+
+        static void Test378KthSmallest(Solution s)
+        {
+            var output = s.KthSmallest(new int[][]{
+                new int[]{1, 2},
+                new int[]{1, 3},
+            }, 2);
+            Console.WriteLine("Input: m = 3, n = 2\nOutput:" + output);
+
+            output = s.KthSmallest(new int[][]{
+                new int[]{1, 5, 9},
+                new int[]{10, 11, 13},
+                new int[]{12, 13, 15}
+            }, 8);
+            Console.WriteLine("Input: m = 3, n = 2\nOutput:" + output);
+            output = s.KthSmallest(new int[][]{
+                new int[]{-5}
+            }, 1);
+            Console.WriteLine("Input: m = 23, n = 12\nOutput:" + output);
         }
 
         static void Test62UniquePaths(Solution s)
