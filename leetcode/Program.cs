@@ -63,7 +63,16 @@ namespace leetcode
             // Test242IsAnagram(s);
             // Test890FindAndReplacePattern(s);
             // Test62UniquePaths(s);
-            Test378KthSmallest(s);
+            // Test378KthSmallest(s);
+            Test729MyCalendar(s);
+        }
+
+        static void Test729MyCalendar(Solution s)
+        {
+            MyCalendar obj = new MyCalendar();
+            Console.WriteLine("[10,20]" + obj.Book(10, 20));
+            Console.WriteLine("[15,25]" + obj.Book(15, 25));
+            Console.WriteLine("[20,30]" + obj.Book(20, 30));
         }
 
         static void Test378KthSmallest(Solution s)
