@@ -64,7 +64,16 @@ namespace leetcode
             // Test890FindAndReplacePattern(s);
             // Test62UniquePaths(s);
             // Test378KthSmallest(s);
-            Test729MyCalendar(s);
+            // Test729MyCalendar(s);
+            Test858MirrorReflection(s);
+        }
+
+        static void Test858MirrorReflection(Solution s)
+        {
+            var output = s.MirrorReflection(2, 1);
+            Console.WriteLine("Input: m = 3, n = 2\nOutput:" + output);
+            output = s.MirrorReflection(3, 1);
+            Console.WriteLine("Input: m = 3, n = 2\nOutput:" + output);
         }
 
         static void Test729MyCalendar(Solution s)
