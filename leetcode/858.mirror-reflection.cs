@@ -8,42 +8,27 @@
 using System;
 
 public partial class Solution {
-    // (x, y)
+    // https://leetcode.cn/problems/mirror-reflection/solution/zhao-zui-xiao-gong-bei-shu-jie-ti-by-ivan1/
+    // 两数最小公倍数和最大公约数乘积等于两数的乘积，所以L / p = q / m (L: 最小公倍数， m：最大公约数)
     public int MirrorReflection(int p, int q) {
-        float px = 0;
-        float py = 0;
-        float x = p;
-        float y = q;
+        int g = gcd(p, q);
+        int m = p / g; // = l / q
+        int n = q / g; // = l / p
+        m %= 2;
+        n %= 2;
 
-        while (!(AtPoint(x, y, p, 0) || AtPoint(x, y, p, p) || AtPoint(x, y, 0, p)))
-        {
-            // left or right
-            if (FEqual(x, p) || FEqual(x, 0))
-            {
-                x = FEqual(x, p) ? 0 : p;
-                y = 
-            }
-            // top or down
-            else
-            {
-                
-            }
-        }
-
-        if (AtPoint(x, y, p, 0)) return 0;
-        if (AtPoint(x, y, p, p)) return 1;
-        if (AtPoint(x, y, 0, p)) return 2;
+        // 
+        if (m == 1 && n == 1)
+            return 1;
+        return m == 1 ? 0 : 2;
     }
 
-    private bool AtPoint(float x, float y, float tx, float ty)
+    // 最大公约数
+    public int gcd(int a, int b)
     {
-        return FEqual(x, tx) && FEqual(y, ty);
+        if (a == 0) return b;
+        return gcd(b % a, a);
     }
-
-    private bool FEqual(float a, float b)
-    {
-        return MathF.Abs(a - b) < float.Epsilon;
-    } 
 }
 // @lc code=end
 
