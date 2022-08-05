@@ -65,7 +65,16 @@ namespace leetcode
             // Test62UniquePaths(s);
             // Test378KthSmallest(s);
             // Test729MyCalendar(s);
-            Test858MirrorReflection(s);
+            // Test858MirrorReflection(s);
+            Test377CombinationSum4(s);
+        }
+
+        static void Test377CombinationSum4(Solution s)
+        {
+            var output = s.CombinationSum4(new int[]{1,2,3}, 4);
+            Console.WriteLine("Input: nums = [1,2,3], target = 4\nOutput:" + output);
+            output = s.CombinationSum4(new int[]{9}, 3);
+            Console.WriteLine("Input: nums = [9], target = 3\nOutput:" + output);
         }
 
         static void Test858MirrorReflection(Solution s)
