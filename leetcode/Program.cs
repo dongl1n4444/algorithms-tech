@@ -66,7 +66,18 @@ namespace leetcode
             // Test378KthSmallest(s);
             // Test729MyCalendar(s);
             // Test858MirrorReflection(s);
-            Test377CombinationSum4(s);
+            // Test377CombinationSum4(s);
+            Test300LengthOfLIS(s);
+        }
+
+        static void Test300LengthOfLIS(Solution s)
+        {
+            var output = s.LengthOfLIS(new int[]{10,9,2,5,3,7,101,18});
+            Console.WriteLine("Input: nums = [10,9,2,5,3,7,101,18]\nOutput:" + output);
+            output = s.LengthOfLIS(new int[]{0,1,0,3,2,3});
+            Console.WriteLine("Input: nums = [0,1,0,3,2,3]\nOutput:" + output);
+            output = s.LengthOfLIS(new int[]{7,7,7,7,7,7,7});
+            Console.WriteLine("Input: nums = [7,7,7,7,7,7,7]\nOutput:" + output);
         }
 
         static void Test377CombinationSum4(Solution s)
