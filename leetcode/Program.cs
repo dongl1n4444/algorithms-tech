@@ -68,7 +68,14 @@ namespace leetcode
             // Test858MirrorReflection(s);
             // Test377CombinationSum4(s);
             // Test300LengthOfLIS(s);
-            Test823NumFactoredBinaryTrees(s);
+            // Test823NumFactoredBinaryTrees(s);
+            Test108SortedArrayToBST(s);
+        }
+
+        static void Test108SortedArrayToBST(Solution s)
+        {
+            var output = s.SortedArrayToBST(new int[]{-10,-3,0,5,9});
+            Console.WriteLine("Input: nums = [-10,-3,0,5,9]\nOutput:" + output.ToString());
         }
 
         static void Test823NumFactoredBinaryTrees(Solution s)

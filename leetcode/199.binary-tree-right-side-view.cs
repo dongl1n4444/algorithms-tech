@@ -20,17 +20,46 @@
  */
  using System;
 using System.Collections.Generic;
+using System.Text;
 
- public class TreeNode {
-      public int val;
-      public TreeNode left;
-      public TreeNode right;
-      public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-  }
+public class TreeNode {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+    public override string ToString()
+    {
+        StringBuilder sb  = new StringBuilder();
+        sb.Append("[");
+
+        var ss = new Stack<TreeNode>();
+        ss.Push(this);
+
+        while (ss.Count > 0)
+        {
+            var cur = ss.Pop();
+            if (cur != this)
+                sb.Append(",");
+            sb.Append(cur.val);
+
+            if (cur.right != null)
+                ss.Push(cur.right);
+            else
+                sb.Append(",null");
+
+            if (cur.left != null)
+                ss.Push(cur.left);
+            else
+                sb.Append(",null");
+        }
+        sb.Append("]");
+        return sb.ToString();
+    }
+}
 
 public partial class Solution {
     // bfs
