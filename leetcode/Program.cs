@@ -69,7 +69,27 @@ namespace leetcode
             // Test377CombinationSum4(s);
             // Test300LengthOfLIS(s);
             // Test823NumFactoredBinaryTrees(s);
-            Test108SortedArrayToBST(s);
+            // Test108SortedArrayToBST(s);
+        Test98IsValidBST(s);
+        }
+
+        static void Test98IsValidBST(Solution s)
+        {
+            var t = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+            var output = s.IsValidBST(t);
+            Console.WriteLine("Input: nums = [2,1,3] - true\nOutput:" + output.ToString());
+
+            t = new TreeNode(5, new TreeNode(1), new TreeNode(4, new TreeNode(3), new TreeNode(6)));
+            output = s.IsValidBST(t);
+            Console.WriteLine("Input: nums = [5,1,4,null,null,3,6] - false\nOutput:" + output.ToString());
+
+            t = new TreeNode(5, new TreeNode(4), new TreeNode(6, new TreeNode(3), new TreeNode(7)));
+            output = s.IsValidBST(t);
+            Console.WriteLine("Input: nums = [5,1,4,null,null,3,6] - false\nOutput:" + output.ToString());
+
+            t = new TreeNode(3, new TreeNode(1, new TreeNode(0), new TreeNode(2)), new TreeNode(5, new TreeNode(4), new TreeNode(6)));
+            output = s.IsValidBST(t);
+            Console.WriteLine("Input: nums = [3,1,5,0,2,4,6] - true\nOutput:" + output.ToString());
         }
 
         static void Test108SortedArrayToBST(Solution s)
