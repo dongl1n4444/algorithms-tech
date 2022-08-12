@@ -70,8 +70,19 @@ namespace leetcode
             // Test300LengthOfLIS(s);
             // Test823NumFactoredBinaryTrees(s);
             // Test108SortedArrayToBST(s);
-        Test98IsValidBST(s);
+            // Test98IsValidBST(s);
+            Test235LowestCommonAncestor(s);
         }
+
+        static void Test235LowestCommonAncestor(Solution s)
+        {
+            var p = new TreeNode(2, new TreeNode(0), new TreeNode(4, new TreeNode(3), new TreeNode(5)));
+            var q = new TreeNode(8, new TreeNode(7), new TreeNode(9));
+            var root = new TreeNode(6, p, q);
+            var output = s.LowestCommonAncestor2(root, p, q);
+            Console.WriteLine("Input: nums = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8\nOutput:" + output.val);
+        }
+
 
         static void Test98IsValidBST(Solution s)
         {
