@@ -71,7 +71,18 @@ namespace leetcode
             // Test823NumFactoredBinaryTrees(s);
             // Test108SortedArrayToBST(s);
             // Test98IsValidBST(s);
-            Test235LowestCommonAncestor(s);
+            // Test235LowestCommonAncestor(s);
+            Test30FindSubstring(s);
+        }
+
+        static void Test30FindSubstring(Solution s)
+        {
+            var output = s.FindSubstring("ababaab", new string[]{"ab","ba","ba"});
+            Console.WriteLine("Input: s = \"barfoothefoobarman\", words = [\"foo\",\"bar\"]\nOutput:" + ArrayToString<int>(output.ToArray()));
+            output = s.FindSubstring("barfoothefoobarman", new string[]{"foo","bar"});
+            Console.WriteLine("Input: s = \"barfoothefoobarman\", words = [\"foo\",\"bar\"]\nOutput:" + ArrayToString<int>(output.ToArray()));
+            output = s.FindSubstring("barfoofoobarthefoobarman", new string[]{"bar","foo","the"});
+            Console.WriteLine("Input: s = \"barfoothefoobarman\", words = [\"foo\",\"bar\"]\nOutput:" + ArrayToString<int>(output.ToArray()));
         }
 
         static void Test235LowestCommonAncestor(Solution s)
