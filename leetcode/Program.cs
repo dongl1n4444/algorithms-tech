@@ -72,7 +72,14 @@ namespace leetcode
             // Test108SortedArrayToBST(s);
             // Test98IsValidBST(s);
             // Test235LowestCommonAncestor(s);
-            Test30FindSubstring(s);
+            // Test30FindSubstring(s);
+            Test14LongestCommonPrefix(s);
+        }
+
+        static void Test14LongestCommonPrefix(Solution s)
+        {
+            var output = s.LongestCommonPrefix(new string[]{"flower","flow","flight"});
+            Console.WriteLine("Input: strs = [\"flower\",\"flow\",\"flight\"]\nOutput:" + output);
         }
 
         static void Test30FindSubstring(Solution s)
