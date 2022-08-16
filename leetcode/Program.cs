@@ -73,7 +73,18 @@ namespace leetcode
             // Test98IsValidBST(s);
             // Test235LowestCommonAncestor(s);
             // Test30FindSubstring(s);
-            Test14LongestCommonPrefix(s);
+            // Test14LongestCommonPrefix(s);
+            Test387FirstUniqChar(s);
+        }
+
+        static void Test387FirstUniqChar(Solution s)
+        {
+            var output = s.FirstUniqChar("leetcode");
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.FirstUniqChar("loveleetcode");
+            Console.WriteLine("Input: s = loveleetcode\nOutput:" + output);
+            output = s.FirstUniqChar("aabb");
+            Console.WriteLine("Input: s = aabb\nOutput:" + output);
         }
 
         static void Test14LongestCommonPrefix(Solution s)
