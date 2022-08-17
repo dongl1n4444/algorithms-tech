@@ -74,7 +74,16 @@ namespace leetcode
             // Test235LowestCommonAncestor(s);
             // Test30FindSubstring(s);
             // Test14LongestCommonPrefix(s);
-            Test387FirstUniqChar(s);
+            // Test387FirstUniqChar(s);
+            Test804UniqueMorseRepresentations(s);
+        }
+
+        static void Test804UniqueMorseRepresentations(Solution s)
+        {
+            var output = s.UniqueMorseRepresentations(new string[]{"gin","zen","gig","msg"});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.UniqueMorseRepresentations(new string[]{"a"});
+            Console.WriteLine("Input: s = loveleetcode\nOutput:" + output);
         }
 
         static void Test387FirstUniqChar(Solution s)
