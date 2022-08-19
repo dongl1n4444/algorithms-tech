@@ -76,7 +76,18 @@ namespace leetcode
             // Test14LongestCommonPrefix(s);
             // Test387FirstUniqChar(s);
             // Test804UniqueMorseRepresentations(s);
-            Test1338MinSetSize(s);
+            // Test1338MinSetSize(s);
+            Test659IsPossible(s);
+        }
+
+        static void Test659IsPossible(Solution s)
+        {
+            var output = s.IsPossible(new int[]{1,2,3,3,4,5});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPossible(new int[]{1,2,3,3,4,4,5,5});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPossible(new int[]{1,2,3,4,4,5});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test1338MinSetSize(Solution s)
