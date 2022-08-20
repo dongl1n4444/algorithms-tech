@@ -77,7 +77,17 @@ namespace leetcode
             // Test387FirstUniqChar(s);
             // Test804UniqueMorseRepresentations(s);
             // Test1338MinSetSize(s);
-            Test659IsPossible(s);
+            // Test659IsPossible(s);
+        }
+
+        static void Test871MinRefuelStops(Solution s)
+        {
+            var output = s.MinRefuelStops(1, 1, new int[][]{});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.MinRefuelStops(100, 1, new int[][]{new int[]{10, 100}});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.MinRefuelStops(100, 10, new int[][]{new int[]{10, 60}, new int[]{20, 30}, new int[]{30, 30}, new int[]{60, 40}});
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test659IsPossible(Solution s)
