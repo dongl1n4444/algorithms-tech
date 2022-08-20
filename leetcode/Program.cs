@@ -78,6 +78,7 @@ namespace leetcode
             // Test804UniqueMorseRepresentations(s);
             // Test1338MinSetSize(s);
             // Test659IsPossible(s);
+            Test871MinRefuelStops(s);
         }
 
         static void Test871MinRefuelStops(Solution s)
