@@ -6,15 +6,15 @@ namespace leetcode
 {
     public class Program
     {
-        public static long GetTimeStamp()
+        public static long GetTimeStampMS()
         {
             TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
-            return Convert.ToInt64(ts.TotalSeconds);
+            return Convert.ToInt64(ts.TotalMilliseconds);
         }
 
         public static long TimeEslapsed(long s)
         {
-            return GetTimeStamp() - s;
+            return GetTimeStampMS() - s;
         }
 
         public static string ArrayToString<T>(T[] values)
@@ -94,12 +94,50 @@ namespace leetcode
 
         static void Test871MinRefuelStops(Solution s)
         {
-            var output = s.MinRefuelStops(1, 1, new int[][]{});
-            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
-            output = s.MinRefuelStops(100, 1, new int[][]{new int[]{10, 100}});
-            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
-            output = s.MinRefuelStops(100, 10, new int[][]{new int[]{10, 60}, new int[]{20, 30}, new int[]{30, 30}, new int[]{60, 40}});
-            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            var t = GetTimeStampMS();
+            var output = s.MinRefuelStops(1000000, 796714, new int[][]{
+                new int[]{64884,552396},
+                new int[]{90910,178472},
+                new int[]{116654,544451},
+                new int[]{184554,297300},
+                new int[]{185647,754697},
+                new int[]{191237,672007},
+                new int[]{226643,89460},
+                new int[]{237538,439850},
+                new int[]{238381,131944},
+                new int[]{266009,692656},
+                new int[]{298719,769526},
+                new int[]{304253,585245},
+                new int[]{361379,610887},
+                new int[]{499710,141692},
+                new int[]{590286,293507},
+                new int[]{627968,792153},
+                new int[]{740695,288304},
+                new int[]{753738,647324},
+                new int[]{758473,387124},
+                new int[]{784694,686000},
+                new int[]{786179,760641},
+                new int[]{912068,674254},
+                new int[]{914312,729410},
+                new int[]{978628,288861},
+                new int[]{993107,106321}
+            });
+            // 628
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output + " - " + TimeEslapsed(t));
+
+            // var output = s.MinRefuelStops(1000000000, 1000000000, new int[][]{
+            //     new int[]{5,1000000000},
+            //     new int[]{1000,1000000000},
+            //     new int[]{100000,1000000000}
+            // });
+            // Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+
+            // var output = s.MinRefuelStops(1, 1, new int[][]{});
+            // Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            // output = s.MinRefuelStops(100, 1, new int[][]{new int[]{10, 100}});
+            // Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            // output = s.MinRefuelStops(100, 10, new int[][]{new int[]{10, 60}, new int[]{20, 30}, new int[]{30, 30}, new int[]{60, 40}});
+            // Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test659IsPossible(Solution s)
@@ -261,7 +299,7 @@ namespace leetcode
         {
             var output = s.UniquePaths(3, 2);
             Console.WriteLine("Input: m = 3, n = 2\nOutput:" + output);
-            var t0 = GetTimeStamp();
+            var t0 = GetTimeStampMS();
             output = s.UniquePaths(23, 12);
             Console.WriteLine("Input: m = 23, n = 12\nOutput:" + output + "-" + TimeEslapsed(t0));
         }
@@ -391,10 +429,10 @@ namespace leetcode
             Console.WriteLine("Input: m = 2, n = 2, maxMove = 2, startRow = 0, startColumn = 0\nOutput:" + output);
             output = s.FindPaths(1, 3, 3, 0, 1);
             Console.WriteLine("Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1\nOutput:" + output);
-            var ts = GetTimeStamp();
+            var ts = GetTimeStampMS();
             output = s.FindPaths(8, 7, 16, 1, 5);
             Console.WriteLine("Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1\nOutput:" + output + "\nTime:" + TimeEslapsed(ts));
-            ts = GetTimeStamp();
+            ts = GetTimeStampMS();
             output = s.FindPaths(8, 50, 23, 5, 26);
             Console.WriteLine("Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1\nOutput:" + output + "\nTime:" + TimeEslapsed(ts));
         }
