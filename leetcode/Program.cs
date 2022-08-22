@@ -78,7 +78,18 @@ namespace leetcode
             // Test804UniqueMorseRepresentations(s);
             // Test1338MinSetSize(s);
             // Test659IsPossible(s);
-            Test871MinRefuelStops(s);
+            // Test871MinRefuelStops(s);
+            Test342IsPowerOfFour(s);
+        }
+
+        static void Test342IsPowerOfFour(Solution s)
+        {
+            var output = s.IsPowerOfFour(16);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPowerOfFour(5);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPowerOfFour(1);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test871MinRefuelStops(Solution s)
