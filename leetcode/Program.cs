@@ -79,7 +79,16 @@ namespace leetcode
             // Test1338MinSetSize(s);
             // Test659IsPossible(s);
             // Test871MinRefuelStops(s);
-            Test342IsPowerOfFour(s);
+            // Test342IsPowerOfFour(s);
+            Test234IsPalindrome(s);
+        }
+
+        static void Test234IsPalindrome(Solution s)
+        {
+            var output = s.IsPalindrome(new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1)))));
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPalindrome(new ListNode(1, new ListNode(2)));
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test342IsPowerOfFour(Solution s)
