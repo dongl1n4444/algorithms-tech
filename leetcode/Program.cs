@@ -80,7 +80,20 @@ namespace leetcode
             // Test659IsPossible(s);
             // Test871MinRefuelStops(s);
             // Test342IsPowerOfFour(s);
-            Test234IsPalindrome(s);
+            // Test234IsPalindrome(s);
+            Test326IsPowerOfThree(s);
+        }
+
+        static void Test326IsPowerOfThree(Solution s)
+        {
+            var output = s.IsPowerOfThree(27);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPowerOfThree(0);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPowerOfThree(15);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.IsPowerOfThree(45);
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test234IsPalindrome(Solution s)
