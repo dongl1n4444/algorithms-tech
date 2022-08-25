@@ -81,7 +81,16 @@ namespace leetcode
             // Test871MinRefuelStops(s);
             // Test342IsPowerOfFour(s);
             // Test234IsPalindrome(s);
-            Test326IsPowerOfThree(s);
+            // Test326IsPowerOfThree(s);
+            Test383CanConstruct(s);
+        }
+
+        static void Test383CanConstruct(Solution s)
+        {
+            var output = s.CanConstruct("a", "b");
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            output = s.CanConstruct("aa", "aab");
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test326IsPowerOfThree(Solution s)
