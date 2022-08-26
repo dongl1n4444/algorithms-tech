@@ -82,7 +82,16 @@ namespace leetcode
             // Test342IsPowerOfFour(s);
             // Test234IsPalindrome(s);
             // Test326IsPowerOfThree(s);
-            Test383CanConstruct(s);
+            // Test383CanConstruct(s);
+            Test869ReorderedPowerOf2(s);
+        }
+
+        static void Test869ReorderedPowerOf2(Solution s)
+        {
+            var output = s.ReorderedPowerOf2(1892); // 1892
+            Console.WriteLine("Input: s = leetcode\nOutput:" + output);
+            // output = s.ReorderedPowerOf2(526);
+            // Console.WriteLine("Input: s = leetcode\nOutput:" + output);
         }
 
         static void Test383CanConstruct(Solution s)
